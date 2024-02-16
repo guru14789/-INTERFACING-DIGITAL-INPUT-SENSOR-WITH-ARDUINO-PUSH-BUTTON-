@@ -1,16 +1,16 @@
 ## INTERFACING DIGITAL INPUT SENSOR WITH ARDUINO PUSH BUTTON
-## DATE :
-## NAME :																			             
-## ROLLNUMBER :
-## DEPARTMENT 
+## DATE:16.02.2024
+## NAME : SREEKUMAR S																			             
+## ROLLNUMBER :212223240157
+## DEPARTMENT: AIML
 
 
 ## AIM:
-To interface a digital input (push button) and blink and LED upon activation.
+To interface a digital input (push button) and blink an LED upon activation.
 ## COMPONENTS REQUIRED:
 1.	1 KΩ Resistor 
 2.	Arduino Uno 
-3.	Bread board 
+3.	Breadboard 
 4.	USB Interfacing cable 
 5.	Jumper wires 
 6.	LED of choice 
@@ -40,8 +40,8 @@ FIGURE-01
 
 FIGURE-02
 ## PROCEDURE 
- Open tinker cad account 
-1.	Select Arduino uno , bread board , digital input and digital output 
+ Open Tinker Cad account 
+1.	Select Arduino uno, breadboard, digital input, and digital output 
 2.	Connect the circuit as given in the figure 
 3.	Develop the program and compile it for any errors 
 4.	 .Execute the program 
@@ -57,29 +57,45 @@ FIGURE-02
 
 
 FIGURE -03
+![Screenshot 2024-02-16 162453](https://github.com/guru14789/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/151705853/cabbc91f-5d8c-4909-81e8-d58fc00f82c7)
 
 
 
 
 ## PROGRAM 
- 
- 
-
-
-
-
-
-
-
-
-
- 
- 
- 
+```
+int led=3;
+int pushbutton=4;
+void setup()
+{
+pinMode(led,OUTPUT);
+pinMode(pushbutton,INPUT);
+}
+void loop()
+{
+  int a;
+  a=digitalRead(pushbutton);
+  if(a==LOW)
+  {
+    digitalWrite(led,HIGH);
+    delay(500);
+    digitalWrite(led,LOW);
+    delay(500);
+  }
+  else
+  {
+    digitalWrite(led,LOW);
+    delay(500);
+  }
+}
+  ``` 
 
 
 
 ## OUTPUT OF SIMULATION :
+## BUTTON OFF:
+![Screenshot 2024-02-16 155306](https://github.com/guru14789/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/151705853/ef7c9560-f1ce-41b7-bb89-4e3665cf2d64)
 
-[My image](username.github.com/repository/img/image.jpg)
+## BUTTON ON:
+![Screenshot 2024-02-16 155903](https://github.com/guru14789/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/151705853/96194a1d-0a67-4f76-99c4-3317fac45fd8)
 
